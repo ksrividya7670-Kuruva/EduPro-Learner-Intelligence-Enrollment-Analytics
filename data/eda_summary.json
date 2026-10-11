@@ -1,0 +1,94 @@
+{
+  "total_users": 2017,
+  "total_enrollments": 4228,
+  "avg_courses_per_user": 2.1,
+  "unique_courses": 36,
+  "age_stats": {
+    "mean": 24.93,
+    "median": 25.0,
+    "std": 6.08,
+    "min": 15,
+    "max": 35
+  },
+  "gender_counts": {
+    "Female": 1027,
+    "Male": 990
+  },
+  "gender_ratios": {
+    "Female": 50.92,
+    "Male": 49.08
+  },
+  "ageband_users": {
+    "26-35 (Professional)": 973,
+    "18-25 (Young Adult)": 739,
+    "<18 (Youth)": 305
+  },
+  "ageband_users_pct": {
+    "26-35 (Professional)": 48.24,
+    "18-25 (Young Adult)": 36.64,
+    "<18 (Youth)": 15.12
+  },
+  "ageband_enrollments": {
+    "26-35 (Professional)": 2265,
+    "18-25 (Young Adult)": 1487,
+    "<18 (Youth)": 476
+  },
+  "ageband_enrollments_pct": {
+    "26-35 (Professional)": 53.57,
+    "18-25 (Young Adult)": 35.17,
+    "<18 (Youth)": 11.26
+  },
+  "category_counts": {
+    "Data Science & AI": 963,
+    "Software Development": 927,
+    "Cybersecurity & Cloud": 828,
+    "Business & Leadership": 570,
+    "Digital Design & Media": 511,
+    "Public Sector & Health": 429
+  },
+  "category_pct": {
+    "Data Science & AI": 22.78,
+    "Software Development": 21.93,
+    "Cybersecurity & Cloud": 19.58,
+    "Business & Leadership": 13.48,
+    "Digital Design & Media": 12.09,
+    "Public Sector & Health": 10.15
+  },
+  "level_counts": {
+    "Intermediate": 1709,
+    "Beginner": 1371,
+    "Advanced": 1148
+  },
+  "level_pct": {
+    "Intermediate": 40.42,
+    "Beginner": 32.43,
+    "Advanced": 27.15
+  },
+  "type_counts": {
+    "Self-Paced Course": 1354,
+    "Professional Certification": 1293,
+    "Interactive Workshop": 981,
+    "Capstone Project": 600
+  },
+  "type_pct": {
+    "Self-Paced Course": 32.02,
+    "Professional Certification": 30.58,
+    "Interactive Workshop": 23.2,
+    "Capstone Project": 14.19
+  },
+  "gender_cat_chi2": {
+    "chi2": 293.24,
+    "p_value": 2.8479262433611987e-61
+  },
+  "age_lvl_chi2": {
+    "chi2": 640.94,
+    "p_value": 2.130258315139727e-137
+  },
+  "enrollment_concentration": {
+    "1": 669,
+    "2": 746,
+    "3": 386,
+    "4": 171,
+    "5": 45
+  }
+}

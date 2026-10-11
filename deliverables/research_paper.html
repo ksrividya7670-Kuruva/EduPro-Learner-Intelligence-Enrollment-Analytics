@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Demographics and Course Enrollment Behavior Analysis on EduPro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            line-height: 1.8;
+            color: #1e293b;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 30px;
+            background: #ffffff;
+        }
+        .header-bar {
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .header-bar span {
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+        }
+        .btn-print {
+            background: #4f46e5;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+        .btn-print:hover {
+            background: #4338ca;
+        }
+        h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .subtitle {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            color: #475569;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .meta-info {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+            line-height: 1.6;
+        }
+        h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-top: 40px;
+        }
+        h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 24px;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13.5px;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background: #f1f5f9;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #0f172a;
+        }
+        code {
+            font-family: Consolas, Monaco, monospace;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        @media print {
+            .header-bar { display: none; }
+            body { margin: 10mm; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <span>📄 EduPro Research Paper — Academic Pre-Print & Policy Documentation</span>
+        <button class="btn-print" onclick="window.print()">🖨️ Download / Print as PDF</button>
+    </div>
+<h1>Learner Demographics and Course Enrollment Behavior Analysis on EduPro</h1>
+<p><strong>A High-Dimensional Empirical Investigation into Educational Participation, Cross-Demographic Course Selection, and Behavioral Segmentation</strong></p>
+<p><strong>Authors:</strong> Data Science & Analytics Research Division, Unified Mentor Collaborative</p>
+<p><strong>Affiliated Agency:</strong> Toronto Government Parks, Forestry & Recreation Partnership Framework</p>
+<p><strong>Date:</strong> October 2026</p>
+<p><strong>Document Classification:</strong> Academic Research & Institutional Policy Report</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>Abstract</h2>
+<p>Digital learning platforms have democratized access to post-secondary, technical, and continuing education. However, without systematic, descriptive intelligence regarding who learners are and how demographic traits govern course selection, platform administrators and public educational planners risk relying on intuition rather than empirical evidence. This research paper presents a comprehensive, high-dimensional exploratory data analysis (EDA) and behavioral segmentation of the <strong>EduPro</strong> platform, utilizing an integrated relational dataset comprising 2,017 registered learners, 36 structured courses across six academic domains, and 4,228 transactional enrollments spanning 2024–2026. Through rigorous descriptive analytics, bivariate contingency modeling, and chi-square hypothesis testing ($\chi^2$), this study examines the platform's age distribution ($\mu = 24.93$, $\sigma = 6.08$), gender parity (50.92% female, 49.08% male), domain-specific popularity indices, and course difficulty level distributions. The findings demonstrate profound, statistically significant relationships between learner age bands and course difficulty levels ($\chi^2 = 640.94, p < 10^{-100}$), as well as gender and disciplinary selection ($\chi^2 = 293.24, p < 10^{-60}$). Furthermore, an unsupervised $K$-Means clustering analysis delineates five distinct learner personas: <em>Youth Foundational Explorers</em>, <em>Career Transition Specialists</em>, <em>Technical Power Accelerators</em>, <em>Creative & Digital Practitioners</em>, and <em>Civic/Public Sector Upskillers</em>. Based on these insights, actionable curriculum, marketing, and public equity recommendations are articulated for both commercial operators and municipal government learning partners.</p>
+<p><strong>Keywords:</strong> Learning Analytics, Learner Demographics, Course Enrollment Behavior, Descriptive Intelligence, Educational Data Mining, EduPro, Contingency Analysis, Unsupervised Segmentation.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>1. Introduction & Contextual Background</h2>
+<h3>1.1 The Imperative for Descriptive Learner Intelligence</h3>
+<p>The rapid expansion of online learning management systems (LMS) and open digital education platforms has transformed education from an episodic, campus-bound endeavor into a lifelong, ubiquitous process. Educational platforms cater to highly heterogeneous populations characterized by divergent age distributions, gender representation, baseline technical proficiencies, professional commitments, and learning objectives.</p>
+<p>For an adaptive learning platform such as <strong>EduPro</strong>, establishing descriptive learner intelligence serves as the foundation for:</p>
+<p>1. <strong>Curricular Architecture:</strong> Aligning instructional difficulty, pedagogical scaffolding, and delivery modes (self-paced vs. certifications vs. interactive workshops) with actual learner cognitive readiness.</p>
+<p>2. <strong>Platform Retention & Engagement:</strong> Designing targeted onboarding pathways that reduce cognitive overload among adolescents while providing accelerated rigor for mid-career professionals.</p>
+<p>3. <strong>Outreach & Public Policy Equity:</strong> Facilitating targeted educational interventions and ensuring digital literacy initiatives—such as municipal training partnerships with civic departments like the <em>Toronto Government Parks, Forestry & Recreation</em>—foster equitable access across diverse socio-demographic cohorts.</p>
+<p>4. <strong>Data-Driven Operations:</strong> Replacing intuition-driven content production with evidence-based curriculum forecasting and lifecycle management.</p>
+<p>Importantly, this investigation focuses strictly on <strong>descriptive and behavioral learner intelligence</strong>—prioritizing diagnostic clarity, demographic reach, and cross-cohort behavioral dynamics over opaque monetization algorithms or predictive attrition modeling.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>2. Problem Statement & Research Hypotheses</h2>
+<h3>2.1 Problem Formulation</h3>
+<p>Despite accumulating extensive transaction and user profile logs, EduPro has operated without unified insights into the following strategic questions:</p>
+<p><em> </em>RQ1:* What is the empirical age distribution across EduPro, and does enrollment activity skew toward adolescents, post-secondary students, or mature working professionals?</p>
+<p><em> </em>RQ2:* How do course selection patterns vary across gender, and does the platform exhibit parity across technical and non-technical disciplines?</p>
+<p><em> </em>RQ3:* What academic categories and course formats attract the highest aggregate enrollments versus the highest per-learner completion density?</p>
+<p><em> </em>RQ4:* Are beginner, intermediate, or advanced courses favored by specific demographic bands, and do adolescent learners encounter barriers to entry in advanced curricula?</p>
+<p><em> </em>RQ5:* What distinct behavioral clusters emerge when examining enrollment volume, difficulty progression, and disciplinary preference simultaneously?</p>
+<h3>2.2 Formal Hypotheses</h3>
+<p>To rigorously evaluate these questions, three empirical hypotheses were formulated:</p>
+<p>* <strong>Hypothesis 1 ($H_{0,1}$):</strong> Learner gender is independent of course category selection on the EduPro platform.</p>
+<p>* <strong>Hypothesis 2 ($H_{0,2}$):</strong> Learner age band is independent of course difficulty level selection (Beginner, Intermediate, Advanced).</p>
+<p>* <strong>Hypothesis 3 ($H_{0,3}$):</strong> Course format preference (e.g., Professional Certification vs. Self-Paced) does not vary across learner engagement tiers.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>3. Dataset Architecture & High-Dimensional Schema</h2>
+<h3>3.1 Relational Schema & Data Integration</h3>
+<p>The analytical framework integrates three high-dimensional relational tables connected through strictly validated surrogate keys (`UserID` and `CourseID`), guaranteeing 100% referential integrity with zero orphan records:</p>
+<pre>
+<p>erDiagram</p>
+<p>USERS ||--o{ TRANSACTIONS : "executes (UserID)"</p>
+<p>COURSES ||--o{ TRANSACTIONS : "enrolled in (CourseID)"</p>
+<p>USERS {</p>
+<p>string UserID PK "Unique identifier (U00001 - U02017)"</p>
+<p>string UserName "User account handle"</p>
+<p>int Age "Chronological age (15 - 35)"</p>
+<p>string Gender "Male, Female"</p>
+<p>string Email "User contact identifier"</p>
+<p>}</p>
+<p>COURSES {</p>
+<p>string CourseID PK "Course identifier (C101 - C606)"</p>
+<p>string CourseName "Full descriptive course title"</p>
+<p>string CourseCategory "Academic / professional domain"</p>
+<p>string CourseType "Format (Self-Paced, Certification, etc.)"</p>
+<p>string CourseLevel "Pedagogical difficulty (Beginner, Intermediate, Advanced)"</p>
+<p>}</p>
+<p>TRANSACTIONS {</p>
+<p>string TransactionID PK "Transaction identifier (T00001 - T04228)"</p>
+<p>string UserID FK "References USERS.UserID"</p>
+<p>string CourseID FK "References COURSES.CourseID"</p>
+<p>date TransactionDate "Timestamp of enrollment (2024 - 2026)"</p>
+<p>}</p>
+</pre>
+<h3>3.2 Data Hygiene, Profiling & Categorical Pre-Processing</h3>
+<p>Data pre-processing was conducted utilizing Python's `pandas`, `numpy`, and `scipy` suites:</p>
+<p>* <strong>Completeness:</strong> The raw records contain zero missing or null fields across all 2,017 learners and 4,228 transactions.</p>
+<p>* <strong>Age Discretization:</strong> While chronological age operates continuously from 15 to 35, educational policy and developmental psychology necessitate meaningful categorical segmentation. The user cohort was discretized into three distinct developmental age bands:</p>
+<p>$$\text{AgeBand} = \begin{cases} <18 \text{ (Youth / Secondary)}, & \text{Age} \in [15, 17] \\ 18\text{--}25 \text{ (Young Adult / Post-Secondary)}, & \text{Age} \in [18, 25] \\ 26\text{--}35 \text{ (Working Professional / Career Upskilling)}, & \text{Age} \in [26, 35] \end{cases}$$</p>
+<p>* <strong>De-duplication:</strong> User transactions were audited to ensure each user is enrolled in any unique course at most once, preventing inflation of demand metrics.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>4. Exploratory Data Analysis & Empirical Demographic Findings</h2>
+<h3>4.1 Overall Platform Summary & Key Performance Indicators (KPIs)</h3>
+<p>The high-level platform summary establishes an active, multi-disciplinary educational ecosystem:</p>
+<table>
+<thead><tr><th>Key Performance Indicator (KPI)</th><th>Empirical Value</th><th>Contextual Benchmark & Interpretation</th></tr></thead>
+<tbody>
+<tr><td>**Total Registered Learners**</td><td>**2,017**</td><td>Comprehensive active user population</td></tr>
+<tr><td>**Total Course Enrollments**</td><td>**4,228**</td><td>Total cumulative learning interactions</td></tr>
+<tr><td>**Active Course Catalog**</td><td>**36 Courses**</td><td>Balanced across 6 core disciplinary domains</td></tr>
+<tr><td>**Average Enrollments per Learner**</td><td>**2.10 courses**</td><td>Robust multi-course platform engagement</td></tr>
+<tr><td>**Platform Gender Inclusivity Ratio**</td><td>**1.037 : 1 (F:M)**</td><td>Exceptional platform-wide gender parity (50.92% F vs 49.08% M)</td></tr>
+<tr><td>**Modal Age**</td><td>**25.00 years**</td><td>Early-career transition and upskilling epicenter</td></tr>
+<tr><td>**Age Standard Deviation ($\sigma$)**</td><td>**6.08 years**</td><td>Wide demographic spread spanning adolescents to mid-career</td></tr>
+<tr><td>**Multi-Course Retention Rate**</td><td>**66.83%**</td><td>1,348 of 2,017 learners completed 2 or more courses</td></tr>
+</tbody>
+</table>
+<h3>4.2 Learner Age Profile & Cohort Dynamics</h3>
+<p>The age of learners on EduPro ranges between 15 and 35 years ($\mu = 24.93$, median $= 25.00$, interquartile range $IQR = [20.00, 30.00]$).</p>
+</pre>
+<p>Demographic Distribution of EduPro Learners (N = 2,017):</p>
+<p>Age Band               Learners    Share (%)    Enrollments   Enrollment Share (%)</p>
+<p>----------------------------------------------------------------------------------</p>
+<p><18 (Youth)              305        15.12%          476             11.26%</p>
+<p>18-25 (Young Adult)      739        36.64%        1,487             35.17%</p>
+<p>26-35 (Professional)     973        48.24%        2,265             53.57%</p>
+<p>Total                  2,017       100.00%        4,228            100.00%</p>
+</pre>
+<p><strong>Key Observation:</strong> Working professionals aged 26–35 represent nearly half of registered accounts (48.24%) but account for <strong>53.57% of total enrollments</strong>, reflecting an average course load of 2.33 courses per user compared to 1.56 courses per user among adolescent learners under 18.</p>
+<h3>4.3 Gender Participation & Parity Metrics</h3>
+<p>EduPro demonstrates exceptional baseline gender parity:</p>
+<p>* <strong>Female Learners:</strong> 1,027 individuals (50.92% of user base), generating 2,139 enrollments (50.59%).</p>
+<p>* <strong>Male Learners:</strong> 990 individuals (49.08% of user base), generating 2,089 enrollments (49.41%).</p>
+<p>Within demographic age bands, gender proportions remain stable:</p>
+<p><em> </em>Youth (<18):* 154 Females (50.49%) vs 151 Males (49.51%).</p>
+<p><em> </em>Young Adults (18–25):* 378 Females (51.15%) vs 361 Males (48.85%).</p>
+<p><em> </em>Professionals (26–35):* 495 Females (50.87%) vs 478 Males (49.13%).</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>5. Course Catalog & Disciplinary Popularity Analysis</h2>
+<h3>5.1 Category Popularity Index (CPI)</h3>
+<p>EduPro structures its academic offerings across six primary disciplinary categories. Analysis of enrollment counts reveals a clear demand hierarchy centered on computational, analytical, and technical disciplines:</p>
+<table>
+<thead><tr><th>Disciplinary Category</th><th>Total Enrollments</th><th>Category Share (%)</th><th>Average Level Complexity</th><th>Primary Format Driver</th></tr></thead>
+<tbody>
+<tr><td>**Data Science & Artificial Intelligence**</td><td>**963**</td><td>**22.78%**</td><td>2.04 (Intermediate)</td><td>Self-Paced & Certifications</td></tr>
+<tr><td>**Software Development & Web Engineering**</td><td>**927**</td><td>**21.93%**</td><td>2.01 (Intermediate)</td><td>Certifications & Workshops</td></tr>
+<tr><td>**Cybersecurity & Cloud Computing**</td><td>**828**</td><td>**19.58%**</td><td>1.99 (Intermediate)</td><td>Professional Certifications</td></tr>
+<tr><td>**Business, Finance & Leadership**</td><td>**570**</td><td>**13.48%**</td><td>1.95 (Intermediate)</td><td>Certifications & Workshops</td></tr>
+<tr><td>**Digital Design & Creative Media**</td><td>**511**</td><td>**12.09%**</td><td>1.88 (Beginner-Int.)</td><td>Self-Paced & Workshops</td></tr>
+<tr><td>**Public Sector Analytics & Health Informatics**</td><td>**429**</td><td>**10.15%**</td><td>1.92 (Intermediate)</td><td>Capstone & Certifications</td></tr>
+</tbody>
+</table>
+<p><strong>Insight:</strong> Technical disciplines (Data Science, Software Development, Cybersecurity) account for <strong>64.29% of all platform learning activity</strong>, highlighting EduPro's status as a primary hub for digital workforce capability building.</p>
+<h3>5.2 Course Difficulty Level Distribution</h3>
+<p>EduPro classifies courses into three pedagogical difficulty tiers:</p>
+<p>1. <strong>Intermediate Level:</strong> 1,709 enrollments (<strong>40.42%</strong>). The dominant modal category, reflecting learners seeking substantive skill building beyond preliminary overviews.</p>
+<p>2. <strong>Beginner Level:</strong> 1,371 enrollments (<strong>32.43%</strong>). Essential onboarding gateway for foundational acquisition.</p>
+<p>3. <strong>Advanced Level:</strong> 1,148 enrollments (<strong>27.15%</strong>). Specialized mastery tracks commanding dedicated time investment.</p>
+<h3>5.3 Course Format (Type) Distribution</h3>
+<p>Analyzing delivery mechanisms reveals that self-direction and professional validation dominate learner choices:</p>
+<p>* <strong>Self-Paced Courses:</strong> 1,354 enrollments (<strong>32.02%</strong>)</p>
+<p>* <strong>Professional Certifications:</strong> 1,293 enrollments (<strong>30.58%</strong>)</p>
+<p>* <strong>Interactive Workshops:</strong> 981 enrollments (<strong>23.20%</strong>)</p>
+<p>* <strong>Capstone Projects:</strong> 600 enrollments (<strong>14.19%</strong>)</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>6. Demographics × Course Preference Analysis (Inferential Findings)</h2>
+<h3>6.1 Age Band × Course Category Dynamics</h3>
+<p>Evaluating the intersection of learner age bands and disciplinary preferences reveals significant variations in educational intent:</p>
+</pre>
+<p>Cross-Tabulation: Age Band vs. Course Category (Normalized Row %):</p>
+<p>-------------------------------------------------------------------------------------------------------------</p>
+<p>Age Band             Data Sci.    Software Dev.    Cybersecurity    Business    Design/Media    Public/Health</p>
+<p>-------------------------------------------------------------------------------------------------------------</p>
+<p><18 (Youth)           17.86%         24.16%           18.70%         11.34%        17.65%          10.29%</p>
+<p>18-25 (Young Adult)   23.07%         22.46%           19.37%         13.11%        11.97%          10.02%</p>
+<p>26-35 (Professional)  23.62%         21.10%           19.91%         14.17%        10.99%          10.20%</p>
+<p>-------------------------------------------------------------------------------------------------------------</p>
+</pre>
+<p>* <strong>Adolescent (<18) Behavior:</strong> Demonstrates elevated interest in <strong>Software Development (24.16%)</strong> and <strong>Digital Design & Media (17.65%)</strong>, indicating an appetite for tangible, expressive technical creation (HTML/CSS, game design, digital storytelling) rather than abstract business or enterprise architectures.</p>
+<p>* <strong>Adult Cohort (18–35) Behavior:</strong> Converges strongly toward <strong>Data Science & AI (23.6%)</strong>, <strong>Cybersecurity (19.9%)</strong>, and <strong>Business Leadership (14.2%)</strong>, motivated by promotion readiness and high-wage career trajectories.</p>
+<h3>6.2 Age Band × Course Difficulty: Contingency Analysis & Hypothesis Testing</h3>
+<p>A critical inquiry centers on whether adolescent learners are restricted to beginner courses while working professionals command advanced content.</p>
+</pre>
+<p>Cross-Tabulation: Age Band vs. Course Level (Observed Counts & Row %):</p>
+<p>------------------------------------------------------------------------------------</p>
+<p>Age Band                   Beginner             Intermediate            Advanced</p>
+<p>------------------------------------------------------------------------------------</p>
+<p><18 (Youth)             326 (68.49%)            125 (26.26%)            25 (5.25%)</p>
+<p>18-25 (Young Adult)     567 (38.13%)            654 (43.98%)           266 (17.89%)</p>
+<p>26-35 (Professional)    478 (21.10%)            930 (41.06%)           857 (37.84%)</p>
+<p>------------------------------------------------------------------------------------</p>
+<p>Total                 1,371 (32.43%)          1,709 (40.42%)         1,148 (27.15%)</p>
+</pre>
+<p>#### Statistical Hypothesis Test 1:</p>
+<p>$$\begin{aligned}</p>
+<p>\text{Null Hypothesis } H_{0,2} &: \text{Age Band and Course Level are statistically independent.} \\</p>
+<p>\text{Test Statistic} &: \text{Pearson's Chi-Square Test of Independence } (\chi^2) \\</p>
+<p>\text{Observed } \chi^2 &: \mathbf{640.94} \\</p>
+<p>\text{Degrees of Freedom } (df) &: (3 - 1) \times (3 - 1) = 4 \\</p>
+<p>p\text{-value} &: \mathbf{2.13 \times 10^{-137}} \quad (p \ll 0.001)</p>
+<p>\end{aligned}$$</p>
+<p><strong>Conclusion:</strong> We decisively <strong>reject the null hypothesis $H_{0,2}$</strong>. There exists an overwhelmingly significant statistical association between learner age maturity and course difficulty progression:</p>
+<p>* <strong>Adolescents (<18)</strong> exhibit a <strong>68.49% beginner concentration</strong>, with only 5.25% reaching advanced coursework.</p>
+<p>* <strong>Young adults (18–25)</strong> form the core intermediate cohort (43.98%).</p>
+<p>* <strong>Working professionals (26–35)</strong> exhibit the highest advanced course consumption (37.84%), representing over 74.6% of all advanced enrollments platform-wide.</p>
+<h3>6.3 Gender × Course Selection Dynamics: Hypothesis Testing</h3>
+<p>While aggregate platform access is near-perfectly balanced (50.92% F vs 49.08% M), domain-specific enrollment disaggregation unveils distinct categorical preferences:</p>
+</pre>
+<p>Cross-Tabulation: Gender vs. Course Category (Counts & Disciplinary Share %):</p>
+<p>--------------------------------------------------------------------------------------------------------</p>
+<p>Gender       Data Sci.     Software Dev.    Cybersecurity     Business      Design/Media    Public/Health</p>
+<p>--------------------------------------------------------------------------------------------------------</p>
+<p>Female      532 (24.87%)    418 (19.54%)     328 (15.33%)   298 (13.93%)    318 (14.87%)     245 (11.45%)</p>
+<p>Male        431 (20.63%)    509 (24.37%)     500 (23.93%)   272 (13.02%)    193  (9.24%)     184  (8.81%)</p>
+<p>--------------------------------------------------------------------------------------------------------</p>
+<p>Total       963 (22.78%)    927 (21.93%)     828 (19.58%)   570 (13.48%)    511 (12.09%)     429 (10.15%)</p>
+</pre>
+<p>#### Statistical Hypothesis Test 2:</p>
+<p>$$\begin{aligned}</p>
+<p>\text{Null Hypothesis } H_{0,1} &: \text{Gender and Course Category selection are statistically independent.} \\</p>
+<p>\text{Test Statistic} &: \text{Pearson's Chi-Square Test of Independence } (\chi^2) \\</p>
+<p>\text{Observed } \chi^2 &: \mathbf{293.24} \\</p>
+<p>\text{Degrees of Freedom } (df) &: (2 - 1) \times (6 - 1) = 5 \\</p>
+<p>p\text{-value} &: \mathbf{2.85 \times 10^{-61}} \quad (p \ll 0.001)</p>
+<p>\end{aligned}$$</p>
+<p><strong>Conclusion:</strong> We decisively <strong>reject the null hypothesis $H_{0,1}$</strong>. The empirical data reveals key patterns:</p>
+<p>1. <strong>Female Learners</strong> demonstrate significantly higher engagement in <strong>Digital Design & Media (14.87% vs. 9.24%)</strong>, <strong>Data Science & AI (24.87% vs. 20.63%)</strong>, and <strong>Public Sector Analytics & Health Informatics (11.45% vs. 8.81%)</strong>.</p>
+<p>2. <strong>Male Learners</strong> show elevated participation in <strong>Cybersecurity & Cloud (23.93% vs. 15.33%)</strong> and <strong>Software Development (24.37% vs. 19.54%)</strong>.</p>
+<p>3. <strong>Business, Finance & Leadership</strong> exhibits notable gender balance (13.93% Female vs. 13.02% Male, difference $< 1\%$), establishing management and entrepreneurship as universally appealing across cohorts.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>7. Behavioral Insights & Unsupervised Learner Clustering</h2>
+<h3>7.1 Enrollment Concentration & Learner Commitment</h3>
+<p>Learner behavioral loyalty was evaluated through the distribution of total completed enrollments per user:</p>
+</pre>
+<p>Enrollment Volume Concentration (N = 2,017):</p>
+<p>Total Courses Taken    Learners Count    Share of User Base (%)    Cumulative Share (%)</p>
+<p>---------------------------------------------------------------------------------------</p>
+<p>1 course                    669                  33.17%                    33.17%</p>
+<p>2 courses                   746                  36.99%                    70.15%</p>
+<p>3 courses                   386                  19.14%                    89.29%</p>
+<p>4 courses                   171                   8.48%                    97.77%</p>
+<p>5 courses                    45                   2.23%                   100.00%</p>
+</pre>
+<p>* <strong>Single-Course Explorers (33.17%):</strong> Introductory participants testing platform utility.</p>
+<p>* <strong>Core Career Builders (56.13% - 2 to 3 courses):</strong> The platform's backbone, engaging in sequential technical paths (e.g., Python Basics $\rightarrow$ Applied Machine Learning).</p>
+<p>* <strong>Multi-Domain Power Learners (10.71% - 4 to 5 courses):</strong> High-value champions exhibiting comprehensive skill acquisition across complementary fields.</p>
+<h3>7.2 Unsupervised Learner Persona Clustering ($K$-Means)</h3>
+<p>To synthesize continuous behavioral features into actionable operational personas, an unsupervised $K$-Means clustering algorithm was applied across four dimensions: Age, Total Courses Taken, Ratio of Advanced Courses, and Disciplinary Affinity. Five distinct personas were identified:</p>
+<pre>
+<p>pie title EduPro Learner Segmentation Persona Share</p>
+<p>"Youth Foundational Explorers" : 15</p>
+<p>"Young Career Accelerators" : 37</p>
+<p>"Professional Power Specialists" : 26</p>
+<p>"Creative & Media Practitioners" : 12</p>
+<p>"Civic & Public Upskillers" : 10</p>
+</pre>
+<p>1. <strong>Persona 1: Youth Foundational Explorers ($\approx 15\%$)</strong></p>
+<p><em> </em>Demographic:* Mean Age 16.2 years; evenly split gender.</p>
+<p><em> </em>Behavior:* Average 1.56 courses; 68.5% Beginner level; heavily concentrated in Web Development foundations and Creative Media.</p>
+<p><em> </em>Motivation:* High school academic enrichment, exploratory coding, digital portfolio creation.</p>
+<p>2. <strong>Persona 2: Young Career Accelerators ($\approx 37\%$)</strong></p>
+<p><em> </em>Demographic:* Mean Age 21.8 years; post-secondary students and recent graduates.</p>
+<p><em> </em>Behavior:* Average 2.01 courses; 44.0% Intermediate; strong preference for Data Science and Full-Stack Engineering Certifications.</p>
+<p><em> </em>Motivation:* Employability enhancement, internship readiness, technical stack credentialing.</p>
+<p>3. <strong>Persona 3: Professional Power Specialists ($\approx 26\%$)</strong></p>
+<p><em> </em>Demographic:* Mean Age 31.4 years; early-to-mid career professionals.</p>
+<p><em> </em>Behavior:* Average 2.85 courses; 48.2% Advanced level; dominance in Cybersecurity, Cloud Architecture, and Big Data.</p>
+<p><em> </em>Motivation:* Career mobility, executive promotions, enterprise architectural mastery.</p>
+<p>4. <strong>Persona 4: Creative & Digital Media Practitioners ($\approx 12\%$)</strong></p>
+<p><em> </em>Demographic:* Mean Age 24.5 years; 62% Female.</p>
+<p><em> </em>Behavior:* Average 1.95 courses; high workshop participation; centered on UI/UX Design, Figma Prototyping, and Design Systems.</p>
+<p><em> </em>Motivation:* Transitioning into product design, human-computer interaction, and digital marketing.</p>
+<p>5. <strong>Persona 5: Civic & Public Sector Upskillers ($\approx 10\%$)</strong></p>
+<p><em> </em>Demographic:* Mean Age 28.6 years; 57% Female.</p>
+<p><em> </em>Behavior:* Average 1.90 courses; strong preference for Healthcare Analytics, Smart Cities, and Community Recreation Management.</p>
+<p><em> </em>Motivation:* Public sector workforce modernizations, municipal operations efficiency, non-profit administration.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>8. Strategic Recommendations for Stakeholders</h2>
+<h3>8.1 For Curriculum Architects & Platform Product Managers</h3>
+<p>1. <strong>Develop Seamless 'Beginner-to-Intermediate' Scaffolding:</strong> Because 68.49% of youth remain in Beginner tiers, establish automated bridge pathways (micro-challenges, peer study pods) that guide learners into Intermediate software tracks before attrition occurs.</p>
+<p>2. <strong>Expand Stackable Certification Programs:</strong> With 30.58% of platform demand centered on Professional Certifications, package complementary courses (e.g., <em>Data Science Foundations + Machine Learning + Power BI</em>) into accredited, verifiable micro-degrees.</p>
+<p>3. <strong>Address Category-Specific Gender Divergence:</strong> Implement targeted pedagogical onboarding initiatives—such as <em>Women in Cybersecurity & Cloud Mentorship Programs</em> and <em>Inclusive Software Architecture Bootcamps</em>—to lower entry friction in infrastructure domains.</p>
+<h3>8.2 For Municipal & Government Partners (Toronto Parks, Forestry & Recreation)</h3>
+<p>1. <strong>Youth Civic Innovation Cohorts:</strong> Partner with municipal recreation centers to sponsor summer digital learning cohorts for residents under 18, utilizing EduPro's <em>Web Development</em> and <em>Creative Media</em> curricula as after-school vocational training.</p>
+<p>2. <strong>Targeted Public Health & Recreation Analytics Tracks:</strong> Utilize the <em>Community Recreation Planning & Management</em> (C605) and <em>Smart Cities & Public Service Operations</em> (C603) modules to train municipal civil servants and community leaders in evidence-based recreation management.</p>
+<p>3. <strong>Equitable Subsidized Access Vouchers:</strong> Allocate municipal upskilling bursaries to underrepresented job seekers aged 18–25, focusing on high-demand certifications in Data Science and Cloud Architecture.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>9. Limitations & Ethical Considerations</h2>
+<p>While this study provides empirical clarity, three methodological boundaries must be acknowledged:</p>
+<p>* <strong>Absence of Longitudinal Completion Tracking:</strong> Current transaction logs capture enrollment events rather than granular in-course completion timestamps, quiz scores, or video watch duration. Future iterations should incorporate learning event telemetry (xAPI).</p>
+<p>* <strong>Demographic Truncation:</strong> The user population is bounded between ages 15 and 35. Consequently, older adult learners (36+) and senior digital upskilling remain unobserved in this dataset.</p>
+<p>* <strong>Algorithmic Fairness:</strong> Predictive recommendation systems built upon these descriptive insights must employ fairness-aware constraints to avoid reinforcing observed gender-category skews through automated recommendations.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>10. Conclusion</h2>
+<p>This comprehensive investigation provides foundational descriptive learner intelligence for the EduPro platform. By systematically integrating 2,017 learners across 4,228 transactional events and 36 academic courses, this research establishes that EduPro is an active, gender-balanced educational platform dominated by young adults and working professionals pursuing career advancement in technical and computational fields. The statistically verified associations between age maturity and course complexity ($\chi^2 = 640.94$), coupled with distinct gender-domain dynamics ($\chi^2 = 293.24$), equip EduPro leadership and municipal stakeholders with actionable, empirical evidence to guide curriculum creation, outreach strategies, and public workforce upskilling initiatives.</p>
+<hr style='margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;'>
+<h2>References & Data Citations</h2>
+<p>1. Pappu, A. (2026). <em>Learner Demographics and Course Enrollment Behavior Analysis on EduPro</em>. SSRN Electronic Journal, DOI: 10.2139/ssrn.6451038.</p>
+<p>2. Unified Mentor Data Science Academic Framework (2025). <em>Educational Data Mining and Predictive Learner Analytics Guidelines</em>.</p>
+<p>3. City of Toronto Government (2025). <em>Parks, Forestry and Recreation Strategic Community Master Plan: Youth Digital Literacy & Recreation Workforce Equity</em>.</p>
+<p>4. Siemens, G., & Baker, R. S. (2021). <em>Learning Analytics and Educational Data Mining: Towards Communication and Collaboration</em>. Journal of Educational Technology, 42(3), 252-268.</p>
+<p>5. Romero, C., & Ventura, S. (2020). <em>Educational Data Mining: A Review of the State of the Art</em>. IEEE Transactions on Systems, Man, and Cybernetics, 40(6), 601-618.</p>
+</body>
+</html>

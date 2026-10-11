@@ -1,0 +1,37 @@
+CourseID,CourseName,CourseCategory,CourseType,CourseLevel
+C101,Python for Data Analysis & Visualization,Data Science & AI,Self-Paced Course,Beginner
+C102,Applied Machine Learning Foundations,Data Science & AI,Self-Paced Course,Intermediate
+C103,Deep Learning & Neural Networks Masterclass,Data Science & AI,Professional Certification,Advanced
+C104,Data Storytelling with Power BI & Tableau,Data Science & AI,Interactive Workshop,Beginner
+C105,Big Data Engineering with Spark & Kafka,Data Science & AI,Professional Certification,Advanced
+C106,Natural Language Processing & LLM Prompting,Data Science & AI,Capstone Project,Intermediate
+C201,Introduction to Ethical Hacking & Security,Cybersecurity & Cloud,Self-Paced Course,Beginner
+C202,Network Defense & Incident Response,Cybersecurity & Cloud,Professional Certification,Intermediate
+C203,Cloud Infrastructure & AWS Cloud Architect,Cybersecurity & Cloud,Professional Certification,Advanced
+C204,Enterprise Cyber Risk & Compliance,Cybersecurity & Cloud,Interactive Workshop,Intermediate
+C205,Penetration Testing & Red Teaming,Cybersecurity & Cloud,Capstone Project,Advanced
+C206,Information Security Fundamentals,Cybersecurity & Cloud,Self-Paced Course,Beginner
+C301,"Web Development with HTML, CSS & JavaScript",Software Development,Self-Paced Course,Beginner
+C302,Full-Stack React & Node.js Development,Software Development,Professional Certification,Intermediate
+C303,Microservices Architecture & Docker,Software Development,Professional Certification,Advanced
+C304,Mobile App Development with Flutter,Software Development,Interactive Workshop,Intermediate
+C305,Database Systems & SQL Optimization,Software Development,Self-Paced Course,Beginner
+C306,DevOps CI/CD Pipelines & Kubernetes,Software Development,Capstone Project,Advanced
+C401,Business Analytics & Decision Science,Business & Leadership,Professional Certification,Intermediate
+C402,Agile Project Management & Scrum Master,Business & Leadership,Interactive Workshop,Beginner
+C403,Strategic Leadership & Executive Management,Business & Leadership,Professional Certification,Advanced
+C404,Financial Modeling & Valuation with Excel,Business & Leadership,Self-Paced Course,Intermediate
+C405,Digital Product Management Essentials,Business & Leadership,Interactive Workshop,Beginner
+C406,Corporate Strategy & Governance,Business & Leadership,Capstone Project,Advanced
+C501,UI/UX Design Fundamentals with Figma,Digital Design & Media,Self-Paced Course,Beginner
+C502,User Research & Interaction Prototyping,Digital Design & Media,Interactive Workshop,Intermediate
+C503,Design Systems & Enterprise UX Strategy,Digital Design & Media,Professional Certification,Advanced
+C504,Digital Content Creation & Brand Storytelling,Digital Design & Media,Self-Paced Course,Beginner
+C505,Motion Graphics & 3D Animation Basics,Digital Design & Media,Interactive Workshop,Intermediate
+C506,AR/VR Immersive Experience Design,Digital Design & Media,Capstone Project,Advanced
+C601,Public Health Data Systems & Epidemiology,Public Sector & Health,Self-Paced Course,Beginner
+C602,Healthcare Analytics & Clinical Informatics,Public Sector & Health,Professional Certification,Intermediate
+C603,Smart Cities & Public Service Operations,Public Sector & Health,Interactive Workshop,Intermediate
+C604,Civic Technology & Open Data Governance,Public Sector & Health,Capstone Project,Advanced
+C605,Community Recreation Planning & Management,Public Sector & Health,Self-Paced Course,Beginner
+C606,Environmental Sustainability Analytics,Public Sector & Health,Professional Certification,Advanced
